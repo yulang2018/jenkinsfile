@@ -20,6 +20,15 @@ pipeline{
          }
        }
      }
+
+     stage('bulid-npm'){
+       steps{
+         script{
+           mvnHome = tool "NODE"
+           sh "${mvnHome}/bin/npm -v"
+         }
+       }
+     }
      
    }
 }
