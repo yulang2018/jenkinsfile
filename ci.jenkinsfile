@@ -12,4 +12,16 @@ pipeline{
        }
      }
    }
+   
+   stages{
+     stage('bulid-gradle'){
+       steps{
+         script{
+           mvnHome = tool "GRADLE_HOME"
+           sh "${mvnHome}/bin/gradle -v"
+         }
+       }
+     }
+   }
+   
 }
