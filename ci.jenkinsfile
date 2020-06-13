@@ -1,14 +1,14 @@
-pipeline {
+pipeline{
    
    agent{node{label: "master"}}
+   
    stages{
-    stage('bulid'){
-      steps{
-        script{
-          mvn --version
-        }
-      }
-    }
+     stage('bulid'){
+       steps{
+         script{
+           mvn
+         }
+       }
+     }
    }
-
 }
